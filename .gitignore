@@ -1,0 +1,7 @@
+db/*
+*.sqlite
+package-lock.json
+.env
+components/dictionary/*.json
+node_modules/
+messageAI/library/*.json

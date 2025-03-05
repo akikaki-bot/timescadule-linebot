@@ -1,0 +1,194 @@
+{
+    "@version" : "1.0",
+    "index" : ["love","segment","menhera","angrybai","angry","shock","sadness"],
+    "data" : [
+        {
+            "category" : "love",
+            "patterns" : [
+                {
+                    "if" : "愛し",
+                    "match" : "てる|てるよ",
+                    "point" : 0.01
+                },
+                {
+                    "if" : "大好き",
+                    "match" : "大好き",
+                    "point" : 0.05
+                },
+                {
+                    "if" : "大好き愛し",
+                    "match" : "大好き愛し",
+                    "point" : 0.05
+                },
+                {
+                    "if" : "好き",
+                    "match" : "好き",
+                    "point" : 0.025
+                },
+                {
+                    "if" : "すき",
+                    "match" : "すき",
+                    "point" : 0.001
+                },
+                {
+                    "if" : "い",
+                    "match" : "ない|る",
+                    "point" : 0.005
+                },
+                {
+                    "if" : "受け入れる",
+                    "match" : "ね|よ",
+                    "point" : 0.01
+                }
+            ]
+        },
+        {
+            "category" : "segment",
+            "patterns" : [
+                {
+                    "if" : "そうい",
+                    "nextIf" : "う",
+                    "match" : "とこ|ところ|とき",
+                    "point" : 0.5
+                },
+                {
+                    "if" : "何し",
+                    "nextIf" : "て",
+                    "match" : "ても|いても",
+                    "point" : 0.6
+                },
+                {
+                    "if" : "どんな",
+                    "nextIf" : "ことして",
+                    "match" : "も|ても|いても",
+                    "point" : 0.55
+                },
+                {
+                    "if" : "ほんと",
+                    "nextIf" : "ほんと",
+                    "match" : "大好き|好き|すき|だいすき",
+                    "point" : 0.52
+                }
+            ]
+        },
+        {
+            "category" : "menhera",
+            "patterns" : [
+                {
+                    "if" : "ない",
+                    "nextIf" : "の",
+                    "match" : "ね|か",
+                    "point" : 0.01 
+                },
+                {
+                    "if" : "ねえ",
+                    "nextIf" : "の",
+                    "match" : "ね|か",
+                    "point" : 0.01 
+                },
+                {
+                    "if" : "思っ",
+                    "nextIf" : "て",
+                    "match" : "ない|るん|いらっしゃら",
+                    "point" : 0.02
+                },
+                {
+                    "if" : "生き",
+                    "nextIf": "てる",
+                    "match" : "限り|かぎり|あいだ|間",
+                    "point" : 0.015
+                },
+                {
+                    "if" : "死",
+                    "nextIf" : "に",
+                    "match" : "たい|てえ|たえ",
+                    "point" : 0.4
+                },
+                {
+                    "if" : "だね",
+                    "nextIf" : "だね",
+                    "match" : "だね",
+                    "point" : 0.05
+                }
+            ]
+        },
+        {
+            "category" : "angrybai",
+            "patterns" : [
+                {
+                    "if" : "ん",
+                    "match" : "でしょ|だろ",
+                    "point" : 0.25
+                },
+                {
+                    "if" : "の",
+                    "match" : "でしょ|だろ",
+                    "point" : 0.25
+                }
+            ]
+        },
+        {
+            "category" : "angry",
+            "patterns" : [
+                {
+                    "if" : "思っ",
+                    "nextIf" : "て",
+                    "match" : "ない|るん|いらっしゃら",
+                    "point" : 0.01
+                }
+            ]
+        },
+        {
+            "category" : "shock",
+            "patterns" : [
+                {
+                    "if" : "余裕",
+                    "nextIf" : "で",
+                    "match" : "もう|行ける|いける|今|いま",
+                    "point" : 0.025
+                },
+                {
+                    "if" : "せめて",
+                    "nextIf" : "せめて",
+                    "match" : "せめて",
+                    "point" : 0.005
+                },
+                {
+                    "if" : "だね",
+                    "nextIf" : "だね",
+                    "match" : "だね",
+                    "point" : 0.025
+                }
+            ]
+        },
+        {
+            "category" : "sadness",
+            "patterns" : [
+                {
+                    "if" : "せめて",
+                    "nextIf" : "せめて",
+                    "match" : "せめて",
+                    "point" : 0.005
+                },
+                {
+                    "if" : "さみしい",
+                    "nextIf" : "さみしい",
+                    "match" : "さみしい",
+                    "point" : 0.005
+                },
+                {
+                    "if" : "言っ",
+                    "nextIf" : "て",
+                    "match" : "ほしい|ください",
+                    "point" : 0.01
+                },
+                {
+                    "if" : "だね",
+                    "nextIf" : "だね",
+                    "match" : ".",
+                    "point" : 0.03
+                }
+            ]
+        }
+    ]
+}
